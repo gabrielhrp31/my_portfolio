@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gabriel Rodrigues - Portfólio</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+</head>
+<body class="scrollspy" id="home">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper indigo darken-4">
+                <a href="#" class="brand-logo"><img id="navbar-logo" src="imgs/know_me.png" alt="Know me!"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#resumo">Resumo</a></li>
+                <li><a href="#trabalho">Trabalho</a></li>
+                <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="imgs/parallax.jpg"></div>
+        <div class="container">
+            <div class="row">   
+                <div class="col s12">
+                    <h3 class="center-align white-text boogaloo">Olá me chamo</h2>
+                    <h1 class="center-align white-text">Gabriel Rodrigues</h1>
+                    <h4 class="center-align white-text boogaloo">Desenvolvedor Full-Stack e amante do Desenvolvimento Mobile</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="center-align">
+                    <ul id="social-links">
+                        <li>
+                            <a class="btn btn-floating white">
+                                <i class="fab fa-linkedin indigo-text text-darken-4"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-floating white">
+                                <i class="fab fa-github indigo-text text-darken-4"></i>   
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-floating white">
+                                <i class="fab fa-whatsapp indigo-text text-darken-4"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row">
+                    <div class="col s12 m9 l10">
+                      <div id="introduction" class="section scrollspy">
+                        <p>Content </p>
+                      </div>
+                
+                      <div id="structure" class="section scrollspy">
+                        <p>Content </p>
+                      </div>
+                
+                      <div id="initialization" class="section scrollspy">
+                        <p>Content </p>
+                      </div>
+                    </div>
+                    <div class="col hide-on-small-only m3 l2">
+                      <ul class="section table-of-contents">
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#structure">Structure</a></li>
+                        <li><a href="#initialization">Intialization</a></li>
+                      </ul>
+                    </div>
+                  </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.parallax').parallax();
+            $('.scrollspy').scrollSpy({
+                throttle: 10,
+            });
+        });
+    </script>
+</body>
+</html>
