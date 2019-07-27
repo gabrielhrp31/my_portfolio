@@ -7,11 +7,13 @@
     <title>Gabriel Rodrigues - Portfólio</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+    <link href="fonts/Boogaloo-Regular.ttf" rel="stylesheet">
 </head>
-<body class="scrollspy" id="home">
-    <div class="navbar-fixed">
+<body>
+    <div class="navbar-fixed ">
         <nav>
             <div class="nav-wrapper indigo darken-4">
                 <a href="#" class="brand-logo"><img id="navbar-logo" src="imgs/know_me.png" alt="Know me!"></a>
@@ -26,9 +28,9 @@
             </div>
         </nav>
     </div>
-    <div class="parallax-container">
+    <div class="parallax-container scrollspy" id="home">
         <div class="parallax"><img src="imgs/parallax.jpg"></div>
-        <div class="container">
+        <div class="container" id="home-container">
             <div class="row">   
                 <div class="col s12">
                     <h3 class="center-align white-text boogaloo">Olá me chamo</h2>
@@ -60,37 +62,51 @@
         </div>
     </div>
     <div class="container">
-            <div class="row">
-                    <div class="col s12 m9 l10">
-                      <div id="introduction" class="section scrollspy">
-                        <p>Content </p>
-                      </div>
-                
-                      <div id="structure" class="section scrollspy">
-                        <p>Content </p>
-                      </div>
-                
-                      <div id="initialization" class="section scrollspy">
-                        <p>Content </p>
-                      </div>
-                    </div>
-                    <div class="col hide-on-small-only m3 l2">
-                      <ul class="section table-of-contents">
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#structure">Structure</a></li>
-                        <li><a href="#initialization">Intialization</a></li>
-                      </ul>
-                    </div>
-                  </div>
+        <div class="row">
+            <div class="col s12 m9 l10">
+                <div id="sobre" class="section scrollspy" style="height:800px; ">
+                    <p>Sobre </p>
+                </div>
+                <div id="servicos" class="section scrollspy" style="height:800px; ">
+                    <p>Serviços </p>
+                </div>
+                <div id="resumo" class="section scrollspy" style="height:800px; ">
+                    <p>Resumo </p>
+                </div>
+                <div id="trabalho" class="section scrollspy" style="height:800px; ">
+                    <p>Trabalho </p>
+                </div>
+                <div id="contato" class="section scrollspy" style="height:800px; ">
+                    <p>Contato </p>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         $(document).ready(function(){
+            var last = null;
+
             $('.parallax').parallax();
             $('.scrollspy').scrollSpy({
-                throttle: 10,
+                activeClass: 'active',
+                scrollOffset: 50,
+                throttle:10,
+                getActiveElement: function getActiveElement(id){
+                    if(id != last){
+                        $('a[href="#'+last+'"').parent().removeClass('active');
+                        $('a[href="#'+id+'"').parent().addClass('active');
+                        if(id=="home"){
+                            $('#home-container').addClass('animated').addClass('slideInLeft');
+                            $('#home-container').on('animationend', function() {
+                                $('#home-container').removeClass('animated').removeClass('slideInLeft');
+                            })
+                        }
+                    }
+                    last = id;
+                }
             });
         });
     </script>
