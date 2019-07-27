@@ -4,6 +4,20 @@
     height: 50px;
 }
 
+@media only screen and (min-width: 540px){
+    .parallax-container{
+        height: 400px;
+    }
+}
+
+.scrolled{
+    background-color: unset;
+}
+
+.scrolled{
+    opacity: 0.8;
+}
+
 @font-face{
     font-family: 'Boogaloo-Regular';
     src: url('fonts/Boogaloo-Regular.ttf');
@@ -20,6 +34,10 @@
 
 #social-links li a{
     margin: 0px 10px;
+}
+
+#sobre ul li{
+    margin:5px 0;
 }
 
 /* #home-container{

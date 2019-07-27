@@ -16,17 +16,26 @@
         <nav>
             <div class="nav-wrapper indigo darken-4">
                 <a href="#" class="brand-logo"><img id="navbar-logo" src="imgs/know_me.png" alt="Know me!"></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#resumo">Resumo</a></li>
-                <li><a href="#trabalho">Trabalho</a></li>
-                <li><a href="#contato">Contato</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#resumo">Resumo</a></li>
+                    <li><a href="#trabalho">Trabalho</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
         </nav>
     </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="sidenav-close" href="#home">Home</a></li>
+        <li><a class="sidenav-close" href="#sobre">Sobre</a></li>
+        <li><a class="sidenav-close" href="#servicos">Serviços</a></li>
+        <li><a class="sidenav-close" href="#resumo">Resumo</a></li>
+        <li><a class="sidenav-close" href="#trabalho">Trabalho</a></li>
+        <li><a class="sidenav-close" href="#contato">Contato</a></li>
+    </ul>
     <div class="parallax-container scrollspy" id="home">
         <div class="parallax"><img src="imgs/parallax.jpg"></div>
         <div class="container" id="home-container">
@@ -60,21 +69,117 @@
             </div>
         </div>
     </div>
+    <div class="container" style="margin-top: 50px;">
+        <div  id="sobre" class="row scrollspy">
+            <div class="col s4">
+                <img class="responsive-img z-depth-3" src="imgs/profile.jpg" alt="">
+            </div>
+            <div class="col s8">
+                <h4 class="indigo-text text-darken-4 boogaloo">Sobre Mim</h4>
+                <ul class="grey-text text-darken-2">
+                    <li>
+                        <strong>Nome:</strong> Gabriel Henrique Rodrigues Pinto
+                    </li>
+                    <li>
+                        <strong>Idade:</strong> 18 Anos
+                    </li>
+                    <li>
+                        <strong>Expêriencia:</strong> 1 ano
+                    </li>
+                    <li>
+                        <strong>Localização:</strong> <a href="#">Arcos, Minas Gerais</a>
+                    </li>
+                    <li>
+                        <strong>Email:</strong> gabrielws31@gmail.com
+                    </li>
+                    <li>
+                        <strong>Tecnologias:</strong> Wordpress, Django, Laravel, VueJS, 
+                        React, React Native, Ionic, Android, Angular, Versionamento GIT, Heroku Deploy.
+                    </li>
+                    <li>
+                        <strong>Freelancer: </strong> Disponível
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="grey lighten-2">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h4 class="center-align indigo-text text-darken-4 boogaloo">
+                        O que tenho a oferecer
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                            <div class="card-content">
+                                <span class="card-title center-align"><i class="fas fa-arrow-up"></i></span>
+                                <span class="card-title center-align">Sistemas Web</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title center-align"><i class="fas fa-arrow-up"></i></span>
+                                <span class="card-title center-align">Sistemas Web</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title center-align"><i class="fas fa-arrow-up"></i></span>
+                            <span class="card-title center-align">Sistemas Web</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                            <div class="card-content">
+                                <span class="card-title center-align"><i class="fas fa-arrow-up"></i></span>
+                                <span class="card-title center-align">Sistemas Web</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col s12 m9 l10">
-                <div id="sobre" class="section scrollspy" style="height:800px; ">
-                    <p>Sobre </p>
-                </div>
+            <div class="col s12">
                 <div id="servicos" class="section scrollspy" style="height:800px; ">
                     <p>Serviços </p>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
                 <div id="resumo" class="section scrollspy" style="height:800px; ">
                     <p>Resumo </p>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
                 <div id="trabalho" class="section scrollspy" style="height:800px; ">
                     <p>Trabalho </p>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
                 <div id="contato" class="section scrollspy" style="height:800px; ">
                     <p>Contato </p>
                 </div>
@@ -88,7 +193,18 @@
         $(document).ready(function(){
             var last = null;
 
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 64) { 
+                    $('.navbar-fixed nav').addClass('scrolled');
+                } else {
+                    $('.navbar-fixed nav').removeClass('scrolled');
+                }
+            });
+
+            $('.sidenav').sidenav();
+            
             $('.parallax').parallax();
+            
             $('.scrollspy').scrollSpy({
                 activeClass: 'active',
                 scrollOffset: 50,
@@ -97,16 +213,24 @@
                     if(id != last){
                         $('a[href="#'+last+'"').parent().removeClass('active');
                         $('a[href="#'+id+'"').parent().addClass('active');
-                        if(id=="home"){
-                            $('#home-container').addClass('animated').addClass('slideInLeft');
-                            $('#home-container').on('animationend', function() {
-                                $('#home-container').removeClass('animated').removeClass('slideInLeft');
-                            })
+                        switch(id){
+                            case "home":    
+                                animate('#home-container h3, #home-container h4','slideInLeft');
+                                animate('#home-container h1','slideInRight');
+                                animate('#home-container #social-links','fadeInUp');
+                                break;
                         }
                     }
                     last = id;
                 }
             });
+            //  '#home-container h1' '#home-container #social-links'
+            function animate(id, animation){
+                $(id).addClass('animated').addClass(animation);
+                $(id).on('animationend', function() {
+                    $(id).removeClass('animated').removeClass(animation);
+                })
+            }
         });
     </script>
 </body>
