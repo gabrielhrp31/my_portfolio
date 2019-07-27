@@ -69,12 +69,12 @@
             </div>
         </div>
     </div>
-    <div class="container" style="margin-top: 50px;">
+    <div class="container" style="margin-top: 75px;margin-bottom: 75px;">
         <div  id="sobre" class="row scrollspy">
-            <div class="col s4">
+            <div id="sobre-foto" class="col s4">
                 <img class="responsive-img z-depth-3" src="imgs/profile.jpg" alt="">
             </div>
-            <div class="col s8">
+            <div id="sobre-info" class="col s8">
                 <h4 class="indigo-text text-darken-4 boogaloo">Sobre Mim</h4>
                 <ul class="grey-text text-darken-2">
                     <li>
@@ -107,49 +107,45 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h4 class="center-align indigo-text text-darken-4 boogaloo">
+                    <h4 id="service-title" class="center-align indigo-text text-darken-4 boogaloo">
                         O que tenho a oferecer
                     </h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 m6 l3">
-                    <div class="card">
+                    <div id="service1" class="card">
                             <div class="card-content">
-                                <span class="card-title center-align"><i class="fas fa-arrow-up"></i></span>
-                                <span class="card-title center-align">Sistemas Web</span>
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                                <span class="card-title center-align"><i class="fab fa-wordpress indigo-text text-darken-4"></i></span>
+                                <span class="card-title center-align">Desenvolvimento de Sites</span>
+                            <p>Desenvolvimento de sites para a divulgação do seu negócio</p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m6 l3">
+                <div  id="service2" class="col s12 m6 l3">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title center-align"><i class="fas fa-arrow-up"></i></span>
+                                <span class="card-title center-align"><i class="fas fa-chart-line indigo-text text-darken-4"></i></span>
                                 <span class="card-title center-align">Sistemas Web</span>
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                                <p>Desenvolvimento de sistemas de gerenciamento empresarial, agendamento, e-commerce, delivery entre outros.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m6 l3">
+                <div id="service3" class="col s12 m6 l3">
                     <div class="card">
                         <div class="card-content">
-                            <span class="card-title center-align"><i class="fas fa-arrow-up"></i></span>
-                            <span class="card-title center-align">Sistemas Web</span>
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                            <span class="card-title center-align"><i class="fas fa-mobile-alt indigo-text text-darken-4"></i></span>
+                            <span class="card-title center-align">Aplicativos Mobile</span>
+                            <p>Aplicativos dos mais simples aos mais complexos para o aceleramento do seu negócio</p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m6 l3">
+                <div id="service4" class="col s12 m6 l3">
                     <div class="card">
                             <div class="card-content">
-                                <span class="card-title center-align"><i class="fas fa-arrow-up"></i></span>
-                                <span class="card-title center-align">Sistemas Web</span>
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                                <span class="card-title center-align"><i class="fas fa-layer-group indigo-text text-darken-4"></i></span>
+                                <span class="card-title center-align">Design Gráfico</span>
+                            <p>Desenvolvimento de logos, cartazes e artes para promoções</p>
                         </div>
                     </div>
                 </div>
@@ -200,7 +196,7 @@
             
             $('.scrollspy').scrollSpy({
                 activeClass: 'active',
-                scrollOffset: 50,
+                scrollOffset: 140,
                 throttle:10,
                 getActiveElement: function getActiveElement(id){
                     if(id != last){
@@ -211,6 +207,17 @@
                                 animate('#home-container h3, #home-container h4','slideInLeft');
                                 animate('#home-container h1','slideInRight');
                                 animate('#home-container #social-links','fadeInUp');
+                                break;
+                            case "sobre":
+                                animate('#sobre-foto','rollIn');
+                                animate('#sobre-info','flipInX');
+                                break;
+                            case "servicos":
+                                animate('#service-title', 'bounceInDown');
+                                animate('#service1', 'bounceInLeft');
+                                animate('#service4', 'bounceInRight');
+                                animate('#service2', 'bounceInUp');
+                                animate('#service3', 'bounceInUp');
                                 break;
                         }
                     }
