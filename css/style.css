@@ -49,6 +49,10 @@
     height: 225px;
 }
 
+.invisible{
+    opacity: 0;
+}
+
 @media only screen and (min-width:992px){
     .card{
         height: 260px

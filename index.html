@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
 </head>
-<body>
-    <div class="navbar-fixed ">
+<body style="overflow: hidden;">
+    <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper indigo darken-4">
                 <a href="#" class="brand-logo"><img id="navbar-logo" src="imgs/know_me.png" alt="Know me!"></a>
@@ -41,7 +41,7 @@
         <div class="container" id="home-container">
             <div class="row">   
                 <div class="col s12">
-                    <h3 class="center-align white-text boogaloo">Olá me chamo</h2>
+                    <h3 class="center-align white-text boogaloo invisible">Olá me chamo</h2>
                     <h1 class="center-align white-text">Gabriel Rodrigues</h1>
                     <h4 class="center-align white-text boogaloo">Desenvolvedor Full-Stack e amante do Desenvolvimento Mobile</h3>
                 </div>
@@ -71,10 +71,10 @@
     </div>
     <div class="container" style="margin-top: 75px;margin-bottom: 75px;">
         <div  id="sobre" class="row scrollspy">
-            <div id="sobre-foto" class="col s4">
+            <div id="sobre-foto" class="col s4 invisible">
                 <img class="responsive-img z-depth-3" src="imgs/profile.jpg" alt="">
             </div>
-            <div id="sobre-info" class="col s8">
+            <div id="sobre-info" class="col s8 invisible">
                 <h4 class="indigo-text text-darken-4 boogaloo">Sobre Mim</h4>
                 <ul class="grey-text text-darken-2">
                     <li>
@@ -107,14 +107,14 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h4 id="service-title" class="center-align indigo-text text-darken-4 boogaloo">
+                    <h4 id="service-title" class="center-align indigo-text text-darken-4 boogaloo invisible">
                         O que tenho a oferecer
                     </h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 m6 l3">
-                    <div id="service1" class="card">
+                    <div id="service1" class="card invisible">
                             <div class="card-content">
                                 <span class="card-title center-align"><i class="fab fa-wordpress indigo-text text-darken-4"></i></span>
                                 <span class="card-title center-align">Desenvolvimento de Sites</span>
@@ -122,8 +122,8 @@
                         </div>
                     </div>
                 </div>
-                <div  id="service2" class="col s12 m6 l3">
-                        <div class="card">
+                <div  class="col s12 m6 l3">
+                        <div id="service2" class="card invisible">
                             <div class="card-content">
                                 <span class="card-title center-align"><i class="fas fa-chart-line indigo-text text-darken-4"></i></span>
                                 <span class="card-title center-align">Sistemas Web</span>
@@ -131,8 +131,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="service3" class="col s12 m6 l3">
-                    <div class="card">
+                <div class="col s12 m6 l3">
+                    <div id="service3" class="card invisible">
                         <div class="card-content">
                             <span class="card-title center-align"><i class="fas fa-mobile-alt indigo-text text-darken-4"></i></span>
                             <span class="card-title center-align">Aplicativos Mobile</span>
@@ -140,8 +140,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="service4" class="col s12 m6 l3">
-                    <div class="card">
+                <div class="col s12 m6 l3">
+                    <div id="service4" class="card invisible">
                             <div class="card-content">
                                 <span class="card-title center-align"><i class="fas fa-layer-group indigo-text text-darken-4"></i></span>
                                 <span class="card-title center-align">Design Gráfico</span>
@@ -202,6 +202,24 @@
                     if(id != last){
                         $('a[href="#'+last+'"').parent().removeClass('active');
                         $('a[href="#'+id+'"').parent().addClass('active');
+                        switch(last){
+                            case "home":    
+                                $('#home-container h3, #home-container h4').addClass('invisible');
+                                $('#home-container h1').addClass('invisible');
+                                $('#home-container #social-links').addClass('invisible')
+                                break;
+                            case "sobre":
+                                $('#sobre-foto').addClass('invisible');
+                                $('#sobre-info').addClass('invisible');
+                                break;
+                            case "servicos":
+                                $('#service-title').addClass('invisible');
+                                $('#service1').addClass('invisible');
+                                $('#service4').addClass('invisible');
+                                $('#service2').addClass('invisible');
+                                $('#service3').addClass('invisible');
+                                break;
+                        }
                         switch(id){
                             case "home":    
                                 animate('#home-container h3, #home-container h4','slideInLeft');
@@ -226,6 +244,7 @@
             });
             //  '#home-container h1' '#home-container #social-links'
             function animate(id, animation){
+                $(id).removeClass('invisible');
                 $(id).addClass('animated').addClass(animation);
                 $(id).on('animationend', function() {
                     $(id).removeClass('animated').removeClass(animation);
