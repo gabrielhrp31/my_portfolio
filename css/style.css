@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 #navbar-logo{
     margin-top: 5px;
     margin-left: 50px;
@@ -8,6 +11,10 @@
     .parallax-container{
         height: 400px;
     }
+}
+
+nav ul a{
+    font-weight: bold;
 }
 
 .scrolled{
@@ -22,9 +29,15 @@
     font-family: 'Boogaloo-Regular';
     src: url('fonts/Boogaloo-Regular.ttf');
 }
-
+ 
 .boogaloo{
     font-family: 'Boogaloo-Regular'
+}
+
+#sobre{
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
 }
 
 #social-links{
@@ -45,19 +58,123 @@
     width:90%;
 }
 
-.card{
-    height: 225px;
+#trabalho{
+    width:90%;
 }
 
 .invisible{
     opacity: 0;
 }
 
+#servicos  .card{
+    height: 225px;
+}
+
+
 @media only screen and (min-width:992px){
-    .card{
-        height: 260px
+    #servicos   .card{
+        height: 240px
     }
 }
 /* #home-container{
     display: none;
 } */
+
+/***** Custom Scrollbar ***********/
+
+
+::-webkit-scrollbar-track
+{
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+    background: rgba(0, 0, 0, 0.1)!important;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #1a237e;
+    opacity: 0;
+}
+
+#servicos{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#servicos .card-content p {
+    margin-top: 30px;
+}
+
+#resumo,#resumo .row, #resumo .col{
+    background-color: transparent!important;
+}
+/***** Content List Styling ***********/
+.collection{
+    border:none;
+    overflow: visible;
+}
+
+.collection-item:not(:last-child){
+    border-bottom: 1px solid rgba(0,0,0, 0.1)!important;
+}
+.collection-item{
+    height: fit-content;
+    min-height: unset!important;
+    padding-left: 30px!important;
+    padding-top: 20px!important;
+    padding-top: 20px!important;
+}
+.collection-item a{
+    color: rgba(0,0,0,0.87)!important;
+}
+.collection-item a:hover{
+    color: rgba(0,0,0,0.87)!important;
+    text-decoration: underline;
+}
+
+.collection-item .title{
+    font-weight: bold;
+}
+.collection-item .muted{
+    opacity: 0.5;
+}
+
+.collection-item::before{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 0px;
+    border-radius: 100%;
+    background-color:#1a237e;
+    display: inline;
+}
+
+/** Trabalho costumizações**/
+#trabalho .tecnologies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    font-size: 30px;
+    color:#1a237e;
+}
+
+#trabalho .tecnologies svg{
+    height: 32px;
+}
+#trabalho  .card .card-content{
+    height: 300px!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*
