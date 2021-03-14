@@ -52,7 +52,7 @@ $(document).ready(function(){
                         $('#home-container h1').addClass('invisible');
                         $('#home-container #social-links').addClass('invisible');
                         $('#trabalho').addClass('invisible');
-                        animate('#service-title', 'bounceInDown');
+                        animate('#service-title', 'zoomIn');
                         animate('#service1', 'bounceInRight');
                         animate('#service4', 'bounceInRight');
                         animate('#service2', 'bounceInRight');
@@ -64,7 +64,7 @@ $(document).ready(function(){
                         $('#sobre-foto').addClass('invisible');
                         $('#sobre-info').addClass('invisible');
                         $('#trabalho').addClass('invisible');
-                        animate('#service-title', 'bounceInDown');
+                        animate('#service-title', 'zoomIn');
                         animate('#service1', 'bounceInRight');
                         animate('#service4', 'bounceInRight');
                         animate('#service2', 'bounceInRight');
