@@ -87,10 +87,10 @@
                         <strong>Nome:</strong> Gabriel Henrique Rodrigues Pinto
                     </li>
                     <li>
-                        <strong>Idade:</strong> 21 Anos
+                        <strong>Idade:</strong>  <span id="idade"></span> Anos
                     </li>
                     <li>
-                        <strong>Experiência:</strong> 3 anos
+                        <strong>Experiência:</strong> <span id="exp"></span> Anos
                     </li>
                     <li>
                         <strong>Localização:</strong> <a href="https://goo.gl/maps/9WRo9KDCevk2gvzS8">Arcos, Minas
@@ -465,6 +465,25 @@
             </div> -->
         </div>
     </div>
+    <script type = "text/javascript" >
+    
+        var date1 = new Date("06/30/2017");
+        var date2 = new Date();
+        var Difference_In_Time = date2.getTime() - date1.getTime();
+        var Difference_In_Years = (Difference_In_Time / (1000 * 3600 * 24)) / 30 / 12;
+        var paragraph = document.getElementById("exp");
+        var text = document.createTextNode(Difference_In_Years);
+    
+    </script>
+    <script type = "text/javascript" >
+        var date1 = new Date("01/31/2000");
+        var date2 = new Date();
+        var Difference_In_Time = date2.getTime() - date1.getTime();
+        var Difference_In_Years = (Difference_In_Time / (1000 * 3600 * 24)) / 30 / 12;
+        var paragraph = document.getElementById("idade");
+        var text = document.createTextNode(Difference_In_Years);
+    
+    </script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
