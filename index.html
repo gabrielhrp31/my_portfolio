@@ -472,7 +472,7 @@
         var Difference_In_Time = date2.getTime() - date1.getTime();
         var Difference_In_Years = (Difference_In_Time / (1000 * 3600 * 24)) / 30 / 12;
         var paragraph = document.getElementById("exp");
-        var text = document.createTextNode(Difference_In_Years.toFixed(0));
+        var text = document.createTextNode(Difference_In_Years.toFixed(1));
         paragraph.appendChild(text);
     </script>
     <script type = "text/javascript" >
@@ -481,7 +481,7 @@
         var Difference_In_Time = date2.getTime() - date1.getTime();
         var Difference_In_Years = (Difference_In_Time / (1000 * 3600 * 24)) / 30 / 12;
         var paragraph = document.getElementById("idade");
-        var text = document.createTextNode(Difference_In_Years.toFixed(1));
+        var text = document.createTextNode(Difference_In_Years.toFixed(0));
         paragraph.appendChild(text);
     </script>
     <!-- Compiled and minified JavaScript -->
